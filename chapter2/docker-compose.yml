@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  webserver:
+    # docker-composeにローカルディレクトリ(.)の
+    # Dockerfileをもとにイメージを作るように伝える
+    build: .
+
+    # "docke run"の"-p"オプションと同等
+    ports:
+    - "80:80"
+
+    # "docke run"の"-t"オプションと同等
+    tty: true
